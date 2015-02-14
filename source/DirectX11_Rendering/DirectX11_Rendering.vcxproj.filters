@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="source\Test">
+      <UniqueIdentifier>{9312bd5c-8909-4437-b28f-4e95d8084c6e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,6 +33,9 @@
     <ClInclude Include="TestWindowFrame.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="D3D9Test.h">
+      <Filter>source\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DirectX11_Rendering.cpp">
@@ -40,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="TestWindowFrame.cpp">
       <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D9Test.cpp">
+      <Filter>source\Test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -74,6 +74,8 @@ void CTestWindow::Run()
 {
 	MSG msg;
 
+
+	m_test.Init();
 	while (TRUE)
 	{
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
@@ -88,9 +90,11 @@ void CTestWindow::Run()
 		else {
 			//Run
 			Sleep(1);
+			m_test.Run();
 			//
 		}
 	}
+	m_test.Exit();
 	return;
 }
 

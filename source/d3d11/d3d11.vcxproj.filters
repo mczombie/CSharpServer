@@ -24,10 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\mczd3d11.h">
+      <Filter>interface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="mczd3d11.cpp">
+      <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

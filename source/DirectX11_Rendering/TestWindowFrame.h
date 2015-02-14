@@ -1,5 +1,7 @@
 #pragma once
 
+#include "D3D9Test.h"
+
 class CTestWindow
 {
 public:
@@ -26,4 +28,7 @@ private:
 	TCHAR		m_szWindowClass[MAX_LOADSTRING];
 	UINT		m_width, m_height;
 	HWND		m_hWnd;
+
+private:
+	CD3D9Test	m_test;
 };
