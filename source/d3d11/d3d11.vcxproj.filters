@@ -27,12 +27,24 @@
     <ClInclude Include="..\include\mczd3d11.h">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\mczd3d11Format.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="mczd3d11.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="mczd3dFormat.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

@@ -27,6 +27,9 @@
     <ClInclude Include="..\include\mczCore.h">
       <Filter>interface</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\mczMath.h">
+      <Filter>interface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

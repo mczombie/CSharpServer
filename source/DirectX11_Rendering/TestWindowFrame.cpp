@@ -75,7 +75,7 @@ void CTestWindow::Run()
 	MSG msg;
 
 
-	m_test.Init();
+	m_test.Init(m_width, m_height, m_hWnd);
 	while (TRUE)
 	{
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {

@@ -7,9 +7,21 @@
 
 #include "targetver.h"
 
-#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+#define WIN32_LEAN_AND_MEAN     // Exclude rarely-used stuff from Windows headers
 
-
+#pragma warning (disable:4005)
 
 // TODO: reference additional headers your program requires here
 #include <Windows.h>
+
+#include <d3d11.h>
+#include <d3dx11.h>
+#include <d3dx9math.h>
+
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <list>
+#include <map>
+
+#include "mczCore.h"

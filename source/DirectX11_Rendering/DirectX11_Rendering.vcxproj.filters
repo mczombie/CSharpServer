@@ -27,14 +27,14 @@
     <ClInclude Include="targetver.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="DirectX11_Rendering.h">
-      <Filter>common</Filter>
-    </ClInclude>
     <ClInclude Include="TestWindowFrame.h">
       <Filter>source</Filter>
     </ClInclude>
     <ClInclude Include="D3D9Test.h">
       <Filter>source\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX11_Rendering.h">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
