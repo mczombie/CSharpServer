@@ -48,6 +48,9 @@
     <ClInclude Include="VertexTypeMgr.h">
       <Filter>source\Buffer</Filter>
     </ClInclude>
+    <ClInclude Include="EffectShader.h">
+      <Filter>source\Shader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -70,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="VertexTypeMgr.cpp">
       <Filter>source\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectShader.cpp">
+      <Filter>source\Shader</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

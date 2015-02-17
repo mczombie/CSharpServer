@@ -33,7 +33,7 @@ public:
 	virtual	bool	Flip() ZOMBIE_PURE;
 
 	virtual	IVertexTypeMgr*	GetVertexTypeMgr() ZOMBIE_PURE;
-	virtual	ID3DFactory*	GetD3DFactory() ZOMBIE_PURE;
+	virtual	ID3DFactory*	GetFactory() ZOMBIE_PURE;
 };
 
 enum VERTEXFORMAT;
