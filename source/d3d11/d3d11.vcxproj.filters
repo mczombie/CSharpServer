@@ -13,6 +13,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="source\Buffer">
+      <UniqueIdentifier>{3581a465-7f2f-4298-a027-07d17536c668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Shader">
+      <UniqueIdentifier>{24d8c264-763a-4ffd-9e4b-02d96efe7529}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -37,7 +43,10 @@
       <Filter>source</Filter>
     </ClInclude>
     <ClInclude Include="VertexBuffer.h">
-      <Filter>source</Filter>
+      <Filter>source\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexTypeMgr.h">
+      <Filter>source\Buffer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,14 +59,17 @@
     <ClCompile Include="Device.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="VertexBuffer.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="D3DFactory.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="mczd3d11Format.cpp">
       <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>source\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexTypeMgr.cpp">
+      <Filter>source\Buffer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

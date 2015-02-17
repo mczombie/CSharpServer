@@ -163,6 +163,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="VertexTypeMgr.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D3DFactory.cpp" />
@@ -176,6 +177,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="VertexBuffer.cpp" />
+    <ClCompile Include="VertexTypeMgr.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -20,7 +20,7 @@ public:
 	void	ClearMainRt(const mcz::vector4& vColor) override;
 	bool	Flip() override;
 	IVertexTypeMgr*	GetVertexTypeMgr() override;
-	ID3DFactory*	GetD3DFactory() override;
+	ID3DFactory*	GetFactory() override;
 
 public:
 	ID3D11Device*	Get3DDevice() const;

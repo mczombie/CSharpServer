@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 
+#include "VertexTypeMgr.h"
 #include "Device.h"
 
 namespace mczd3d {
@@ -111,10 +112,10 @@ bool CDevice::Flip()
 
 IVertexTypeMgr* CDevice::GetVertexTypeMgr()
 {
-	return nullptr;
+	return GetVertexTypeMgr();
 }
 
-ID3DFactory* CDevice::GetD3DFactory()
+ID3DFactory* CDevice::GetFactory()
 {
 	return &m_resFactory;
 }

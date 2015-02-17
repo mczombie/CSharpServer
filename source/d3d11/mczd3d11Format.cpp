@@ -2,6 +2,8 @@
 
 #include "mczd3d11Format.h"
 
+#include "VertexTypeMgr.h"
+
 namespace mczd3d {
 
 POS_VERT::POS_VERT()
@@ -11,7 +13,7 @@ POS_VERT::POS_VERT()
 
 unsigned int GetVertexSize(VERTEXFORMAT format)
 {
-	return sizeof(POS_VERT);
+	return GetVertexTypeMgr()->GetVertexSize(format);
 }
 
 }
