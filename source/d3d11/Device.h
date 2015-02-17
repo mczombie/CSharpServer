@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mczd3d11.h"
+#include "D3DFactory.h"
 
 namespace mczd3d {
 
@@ -19,6 +20,7 @@ public:
 	void	ClearMainRt(const mcz::vector4& vColor) override;
 	bool	Flip() override;
 	IVertexTypeMgr*	GetVertexTypeMgr() override;
+	ID3DFactory*	GetD3DFactory() override;
 
 public:
 	ID3D11Device*	Get3DDevice() const;
@@ -32,6 +34,9 @@ private:
 	IDXGISwapChain*			m_pSwapChain;
 	ID3D11DeviceContext*	m_pImmediateContext;
 	ID3D11RenderTargetView*	m_pMainRtView;
+
+private:
+	CD3DFactory	m_resFactory;
 };
 
 

@@ -22,4 +22,10 @@ INIT_INFO::INIT_INFO()
 {
 }
 
+VB_CREATE_INFO::VB_CREATE_INFO()
+: format(ERROR_FORMAT), count(0), usage(BU_STATIC), initializeData(nullptr)
+{
+
+}
+
 }

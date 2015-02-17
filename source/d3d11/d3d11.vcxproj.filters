@@ -33,6 +33,12 @@
     <ClInclude Include="Device.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="D3DFactory.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -41,10 +47,16 @@
     <ClCompile Include="mczd3d11.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="mczd3dFormat.cpp">
+    <ClCompile Include="Device.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="Device.cpp">
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DFactory.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="mczd3d11Format.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

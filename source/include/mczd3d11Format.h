@@ -8,6 +8,7 @@ enum VERTEXFORMAT {
 	POS_VERTEX,
 	POS_RHW_VERTEX,
 	NUM_VERTEXFORMAT,
+	ERROR_FORMAT,
 };
 
 struct POS_VERT {
@@ -15,5 +16,5 @@ struct POS_VERT {
 	mcz::vector3	pos;
 };
 
-
+unsigned int GetVertexSize(VERTEXFORMAT format);
 }

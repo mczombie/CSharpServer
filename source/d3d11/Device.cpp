@@ -114,6 +114,11 @@ IVertexTypeMgr* CDevice::GetVertexTypeMgr()
 	return nullptr;
 }
 
+ID3DFactory* CDevice::GetD3DFactory()
+{
+	return &m_resFactory;
+}
+
 bool CDevice::CreateMainRT()
 {
 	ID3D11Texture2D* pBackBuffer = nullptr;
