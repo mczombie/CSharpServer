@@ -15,7 +15,7 @@ public:
 	D3DBUFFER_TYPE	GetType() const override;
 
 public:
-	const ID3D11Buffer*		GetBuffer() const;
+	 ID3D11Buffer*	GetBuffer() const;
 
 private:
 	ID3D11Buffer*	m_pVertexBuffer;

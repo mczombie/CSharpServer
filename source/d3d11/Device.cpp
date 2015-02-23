@@ -1,6 +1,11 @@
 #include "StdAfx.h"
 
+#include "VertexShader.h"
+#include "PixelShader.h"
 #include "VertexTypeMgr.h"
+#include "InputLayout.h"
+#include "VertexBuffer.h"
+
 #include "Device.h"
 
 namespace mczd3d {
@@ -120,6 +125,12 @@ ID3DFactory* CDevice::GetFactory()
 	return &m_resFactory;
 }
 
+void CDevice::SetInputLayout(IInputLayout* pInputLayout)
+{
+	CInputLayout* pRealLayout = dynamic_cast<CInputLayout*>(pInputLayout);
+	m_pImmediateContext->IASetInputLayout(pRealLayout->GetLayout());
+}
+
 bool CDevice::CreateMainRT()
 {
 	ID3D11Texture2D* pBackBuffer = nullptr;
@@ -135,6 +146,39 @@ bool CDevice::CreateMainRT()
 	m_pImmediateContext->OMSetRenderTargets(1, &m_pMainRtView, nullptr);
 
 	return true;
+}
+
+void CDevice::SetVertexShader(IVertexShader* pShader)
+{
+	CVertexShader* pRealShader = dynamic_cast<CVertexShader*>(pShader);
+	m_pImmediateContext->VSSetShader(pRealShader->GetShader(), nullptr, 0);
+}
+
+void CDevice::SetPixelShader(IPixelShader* pShader)
+{
+	CPixelShader* pRealShader = dynamic_cast<CPixelShader*>(pShader);
+	m_pImmediateContext->PSSetShader(pRealShader->GetShader(), nullptr, 0);
+}
+
+void CDevice::SetVertexBuffer(ID3DBuffer* pVertexBufrfer)
+{
+	//GetVertexTypeMgr()->GetVertexStride(pVertexBufrfer->GetFormat());
+	unsigned int stride = sizeof(POS_VERT);
+	unsigned int offset = 0;
+
+	CVertexBuffer* pRealBuffer = dynamic_cast<CVertexBuffer*>(pVertexBufrfer);
+	ID3D11Buffer * p11Buffer = pRealBuffer->GetBuffer();
+	m_pImmediateContext->IASetVertexBuffers(0, 1, &p11Buffer, &stride, &offset);
+}
+
+void CDevice::SetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY primitive)
+{
+	m_pImmediateContext->IASetPrimitiveTopology(primitive);
+}
+
+void CDevice::Draw(unsigned int vertCount, unsigned int startPoint)
+{
+	m_pImmediateContext->Draw(vertCount, startPoint);
 }
 
 ID3D11Device* CDevice::Get3DDevice() const

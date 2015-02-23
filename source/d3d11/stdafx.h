@@ -13,7 +13,6 @@
 
 // TODO: reference additional headers your program requires here
 #include <Windows.h>
-
 #include <d3d11.h>
 #include <d3dx11.h>
 #include <d3dx9math.h>
@@ -23,5 +22,6 @@
 #include <functional>
 #include <list>
 #include <map>
+#include <string>
 
 #include "mczCore.h"

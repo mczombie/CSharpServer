@@ -1,5 +1,7 @@
 #pragma once
 
+#include "mczd3d11.h"
+
 class CD3D9Test
 {
 public:
@@ -19,8 +21,12 @@ private:
 	void	Render(float elapsedTime);
 
 private:
+	void	CreateTest();
 
-
-
+private:
+	mczd3d::IVertexShader*	m_pVS;
+	mczd3d::IPixelShader*	m_pPS;
+	mczd3d::ID3DBuffer*		m_pVB;
+	mczd3d::IInputLayout*	m_pIL;
 };
 

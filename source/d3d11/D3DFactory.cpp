@@ -1,6 +1,10 @@
 #include "stdafx.h"
 
 #include "VertexBuffer.h"
+#include "VertexShader.h"
+#include "PixelShader.h"
+#include "VertexTypeMgr.h"
+
 #include "Device.h"
 #include "D3DFactory.h"
 
@@ -48,6 +52,27 @@ ID3DBuffer* CD3DFactory::CreateVertexBuffer(const VB_CREATE_INFO& info) const
 		pNewBuffer = new CVertexBuffer(pD3DBuffer);
 	}
 	return pNewBuffer;
+}
+
+IVertexShader* CD3DFactory::CreateVertexShader(const VS_LOADINFO& info) const
+{
+	CVertexShader* pNewShader = new CVertexShader;
+	if (pNewShader->Create(info) == false)
+		SAFE_DELETE(pNewShader);
+	return pNewShader;
+}
+
+IPixelShader* CD3DFactory::CreatePixelShader(const PS_LOADINFO& info) const
+{
+	CPixelShader* pNewShader = new CPixelShader;
+	if (pNewShader->Create(info) == false)
+		SAFE_DELETE(pNewShader);
+	return pNewShader;
+}
+
+IInputLayout* CD3DFactory::CreateInputLayout(VERTEXFORMAT format, IVertexShader* pVB)
+{
+	return GetVertexTypeMgr()->CreateInputLayout(format, pVB);
 }
 
 }

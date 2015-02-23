@@ -22,6 +22,16 @@ public:
 	IVertexTypeMgr*	GetVertexTypeMgr() override;
 	ID3DFactory*	GetFactory() override;
 
+	void	SetInputLayout(IInputLayout* pInputLayout) override;
+	void	SetVertexShader(IVertexShader* pShader) override;
+	void	SetPixelShader(IPixelShader* pShader) override;
+	void	SetVertexBuffer(ID3DBuffer* pVertexBufrfer) override;
+
+	void	SetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY primitive) override;
+
+
+	void	Draw(unsigned int vertCount, unsigned int startPoint) override;
+
 public:
 	ID3D11Device*	Get3DDevice() const;
 

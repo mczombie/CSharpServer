@@ -19,7 +19,7 @@ public:
 	void		Exit();
 
 public:
-	//IInputLayout*		CreateInputLayout(VERTEXFORMAT format, IVertexShader* pShader);
+	IInputLayout*		CreateInputLayout(VERTEXFORMAT format, IVertexShader* pShader);
 	unsigned int		GetVertexSize(VERTEXFORMAT format) const;
 
 private:

@@ -12,7 +12,10 @@ public:
 	~CD3DFactory();
 
 public:
-	ID3DBuffer*	CreateVertexBuffer(const VB_CREATE_INFO& info) const override;
+	ID3DBuffer*		CreateVertexBuffer(const VB_CREATE_INFO& info) const override;
+	IVertexShader*	CreateVertexShader(const VS_LOADINFO& info) const override;
+	IPixelShader*	CreatePixelShader(const PS_LOADINFO& info) const override;
+	IInputLayout*	CreateInputLayout(VERTEXFORMAT format, IVertexShader* pVB) override;
 };
 
 }
